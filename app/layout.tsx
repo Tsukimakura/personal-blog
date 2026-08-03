@@ -16,5 +16,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="zh-CN"><body><header><Link className="brand" href="/">{siteName}</Link><nav><Link href="/posts">文章</Link><Link href="/tags">标签</Link><Link href="/about">关于</Link></nav></header><main>{children}</main><footer>© {new Date().getFullYear()} {siteName} · <a href="/rss.xml">RSS</a></footer></body></html>;
+  return <html lang="zh-CN"><body><header><Link className="brand" href="/">{siteName}</Link><nav><Link href="/posts">文章</Link><Link href="/archive">归档</Link><Link href="/tags">标签</Link><Link href="/about">关于</Link></nav></header><main>{children}</main><footer>© {new Date().getFullYear()} {siteName} · <a href="/rss.xml">RSS</a></footer></body></html>;
 }

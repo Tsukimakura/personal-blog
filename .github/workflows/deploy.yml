@@ -43,7 +43,6 @@ jobs:
           DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
           DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
           DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
-          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
         run: |
           set -euo pipefail
           for secret_name in DEPLOY_HOST DEPLOY_PORT DEPLOY_USER DEPLOY_SSH_KEY DEPLOY_KNOWN_HOSTS; do
@@ -58,7 +57,6 @@ jobs:
           chmod 600 ~/.ssh/deploy_key
           DEPLOY_PORT="${DEPLOY_PORT:-22}"
           ssh -i ~/.ssh/deploy_key \
-            -p "$DEPLOY_PORT" \
             -p "$DEPLOY_PORT" \
             -o BatchMode=yes \
             -o ConnectTimeout=15 \

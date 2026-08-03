@@ -1,2 +1,2 @@
 export const metadata = { title: "关于" };
-export default function About() { return <><h1>关于本站</h1><p>这是一个由 Git 与 MDX 驱动的个人博客。每篇文章都是仓库中的一个文件，可审阅、可追踪、可长期保存。</p><p>本站的技术实现、部署和运维文档同样公开在仓库中。</p></>; }
+export default function About() { return <><h1>关于本站</h1><p>这里是 Tsukimakura 的临时博客，正在建设中……</p><p>目前就读于浙江大学计算机科学与技术（图灵班）专业，请多指教！</p></>; }

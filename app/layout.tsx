@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/lib/site";
+import "katex/dist/katex.min.css";
 import "./styles.css";
 
 export const dynamic = "force-dynamic";

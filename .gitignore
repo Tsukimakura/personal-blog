@@ -35,5 +35,6 @@ Thumbs.db
 *.crt
 *.sqlite
 *.sqlite3
+data/
 backups/
 secrets/

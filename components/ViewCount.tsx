@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export function ViewCount({ slug }: { slug: string }) {
-  const [count, setCount] = useState<number | null | undefined>(null);
+export function ViewCount({ slug, initialCount }: { slug: string; initialCount: number }) {
+  const [count, setCount] = useState(initialCount);
   const requested = useRef(false);
 
   useEffect(() => {
@@ -26,8 +26,8 @@ export function ViewCount({ slug }: { slug: string }) {
         setCount(data.count);
         if (!alreadyViewed) sessionStorage.setItem(storageKey, "1");
       })
-      .catch(() => setCount(undefined));
+      .catch(() => undefined);
   }, [slug]);
 
-  return <span>{count === null ? "浏览量加载中" : count === undefined ? "浏览量暂不可用" : `${count} 次浏览`}</span>;
+  return <span>{count} 次浏览</span>;
 }
